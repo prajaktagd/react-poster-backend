@@ -12,6 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/posts", async (req, res) => {
+  // await new Promise((resolve, reject) => setTimeout(() => resolve(), 500));
   return res.json({ posts: await getPosts() });
 });
 
