@@ -19,7 +19,7 @@ app.get("/posts", async (req, res) => {
 app.get("/posts/:id", async (req, res) => {
   const posts = await getPosts();
   const post = posts.find((post) => post.id === req.params.id);
-  return res.join({ post });
+  return res.json({ post });
 });
 
 app.post("/posts", async (req, res) => {
